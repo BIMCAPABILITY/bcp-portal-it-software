@@ -16,13 +16,23 @@ const LoginPage = () => {
               <div className="login-main-box">
                 <div className="login-box-title">LOGIN</div>
                 <div className="login-box-input">
-                <TextField
-                    required
-                    id="standard-required"
-                    label="Username (Required)"
-                    placeholder="Enter your username"
-                    variant="standard"
-                  />
+                  <TextField
+                      required
+                      id="standard-required"
+                      label="Username (Required)"
+                      placeholder="Enter your username"
+                      variant="standard"
+                    />
+                </div>
+                <div className="login-box-input">
+                  <TextField
+                      required
+                      id="standard-required"
+                      label="Password (Required)"
+                      type="password"
+                      placeholder="Enter your password"
+                      variant="standard"
+                    />
                 </div>
                 <div className="login-box-btn">
                     <Button variant="contained" aria-label="Login" size="small" >Submit</Button>

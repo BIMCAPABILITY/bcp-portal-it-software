@@ -62,12 +62,12 @@ const NotificationForm = () => {
                                     <MenuItem value="">
                                         <em>None</em>
                                     </MenuItem>
-                                    <MenuItem value="1">Version updates</MenuItem>
-                                    <MenuItem value="1">Patch releases</MenuItem>
-                                    <MenuItem value="1">Industrial news</MenuItem>
-                                    <MenuItem value="1">Company news</MenuItem>
-                                    <MenuItem value="1">Product launch</MenuItem>
-                                    <MenuItem value="1">Beta releases</MenuItem>
+                                    <MenuItem value="Version updates">Version updates</MenuItem>
+                                    <MenuItem value="Version updates">Patch releases</MenuItem>
+                                    <MenuItem value="Industrial news">Industrial news</MenuItem>
+                                    <MenuItem value="Company news">Company news</MenuItem>
+                                    <MenuItem value="Product launch">Product launch</MenuItem>
+                                    <MenuItem value="Beta releases">Beta releases</MenuItem>
 
                                     </Select>
                                 </FormControl>

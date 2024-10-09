@@ -21,6 +21,9 @@ import { DataGrid } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
 
 
+import ReactQuill from 'react-quill';
+import "react-quill/dist/quill.snow.css";
+
 const columns = [
   { field: 'id', headerName: 'ID', width: 60 },
   { field: 'softwareImage', headerName: 'Software Image', width: 120, renderCell: renderSoftwareImage },
@@ -46,6 +49,8 @@ const paginationModel = { page: 0, pageSize: 5 };
 
 
 const Software = () => {
+
+  const [valueSoftwareInfo, setValueSoftwareInfo] = useState('');
 
   const [dropDown, setDropDown] = useState(false);
 
@@ -133,14 +138,14 @@ const Software = () => {
                                         id="demo-simple-select-standard"
                                         value={dropDown}
                                         onChange={handleChangeDropDown}
-                                        label="Age"
+                                        label="Software Category"
                                       >
                                         <MenuItem value="">
                                           <em>None</em>
                                         </MenuItem>
-                                        <MenuItem value="">1</MenuItem>
-                                        <MenuItem value="">2</MenuItem>
-                                        <MenuItem value="">3</MenuItem>
+                                        <MenuItem value="1">1</MenuItem>
+                                        <MenuItem value="2">2</MenuItem>
+                                        <MenuItem value="3">3</MenuItem>
                                       </Select>
                                   </FormControl>
                               </div>
@@ -152,22 +157,24 @@ const Software = () => {
                               </div>
                               <div className='asm-input-insert-box'>
                               <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-                                    <InputLabel id="demo-simple-select-standard-label">Software Category</InputLabel>
+                                    <InputLabel id="demo-simple-select-standard-label">Software Status</InputLabel>
                                       <Select
                                         labelId="demo-simple-select-standard-label"
                                         id="demo-simple-select-standard"
                                         value={statusDropDown}
                                         onChange={handleChangeStatusDropDown}
-                                        label="Age"
+                                        label="Software Status"
                                       >
                                         <MenuItem value="">
                                           <em>None</em>
                                         </MenuItem>
-                                        <MenuItem value="">1</MenuItem>
-                                        <MenuItem value="">2</MenuItem>
-                                        <MenuItem value="">3</MenuItem>
+                                        <MenuItem value="Active">Active</MenuItem>
+                                        <MenuItem value="Inactive">Inactive</MenuItem>
                                       </Select>
                                   </FormControl>
+                              </div>
+                              <div className='asm-input-insert-box'>
+                                  <ReactQuill theme="snow" value={valueSoftwareInfo} onChange={setValueSoftwareInfo} />
                               </div>
                             </div>
                             <div className='asm-upload-insert'>

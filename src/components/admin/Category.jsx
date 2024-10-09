@@ -87,20 +87,19 @@ const Category = () => {
                               </div>
                               <div className='asm-input-insert-box'>
                                   <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-                                    <InputLabel id="demo-simple-select-standard-label">Category Category</InputLabel>
+                                    <InputLabel id="demo-simple-select-standard-label">Category Status</InputLabel>
                                       <Select
                                         labelId="demo-simple-select-standard-label"
                                         id="demo-simple-select-standard"
                                         value={statusDropDown}
                                         onChange={handleChangeStatusDropDown}
-                                        label="Age"
+                                        label="Category Status"
                                       >
                                         <MenuItem value="">
                                           <em>None</em>
                                         </MenuItem>
-                                        <MenuItem value="">1</MenuItem>
-                                        <MenuItem value="">2</MenuItem>
-                                        <MenuItem value="">3</MenuItem>
+                                        <MenuItem value="Active">Active</MenuItem>
+                                        <MenuItem value="Inactive">Inactive</MenuItem>
                                       </Select>
                                   </FormControl>
                               </div>
